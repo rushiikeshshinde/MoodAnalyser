@@ -2,7 +2,18 @@ package org.example;
 
 public class MoodAnalyser {
 
-    public String analyseMood(String message){
+    String message;
+
+    public MoodAnalyser() {
+        this.message = "";
+    }
+
+    public MoodAnalyser(String message) {
+        this.message = message;
+    }
+
+
+    public String analyseMood(){
 
         message = message.toUpperCase();
         if(message.contains("SAD")){
@@ -20,7 +31,7 @@ public class MoodAnalyser {
         MoodAnalyser moodAnalyser = new MoodAnalyser();
 
         String message = "I am feeling Sad Today";
-        System.out.println("The mood is "+moodAnalyser.analyseMood(message));
+        System.out.println("The mood is "+moodAnalyser.analyseMood());
 
     }
 }

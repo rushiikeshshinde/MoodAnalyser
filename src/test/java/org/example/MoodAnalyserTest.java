@@ -9,16 +9,16 @@ class MoodAnalyserTest {
     @Test
     void whenInSadMoodShouldReturnSad(){
 
-        MoodAnalyser moodAnalyser = new MoodAnalyser();
-        String message = moodAnalyser.analyseMood("I am in Sad Mood");
+        MoodAnalyser moodAnalyser = new MoodAnalyser("I am in Sad Mood");
+        String message = moodAnalyser.analyseMood();
         assertEquals("SAD", message);
 
     }
 
     @Test
     void whenInAnyMoodShouldReturnHappy(){
-        MoodAnalyser moodAnalyser = new MoodAnalyser();
-        String message = moodAnalyser.analyseMood("I am in Any Mood");
+        MoodAnalyser moodAnalyser = new MoodAnalyser("I am in Happy Mood");
+        String message = moodAnalyser.analyseMood();
         assertEquals("HAPPY", message);
     }
 
