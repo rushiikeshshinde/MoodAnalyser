@@ -22,5 +22,12 @@ class MoodAnalyserTest {
         assertEquals("HAPPY", message);
     }
 
+    @Test
+    void whenNullMoodShouldReturnHappy(){
+        MoodAnalyser moodAnalyser2 = new MoodAnalyser(null);
+        System.out.println("The mood is "+moodAnalyser2.analyseMood());
+        assertEquals("HAPPY", moodAnalyser2.analyseMood());
+    }
+
 
 }

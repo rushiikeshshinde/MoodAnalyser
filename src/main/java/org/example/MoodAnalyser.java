@@ -15,8 +15,12 @@ public class MoodAnalyser {
 
     public String analyseMood(){
 
-        message = message.toUpperCase();
-        if(message.contains("SAD")){
+
+        if(this.message == null){
+            return "HAPPY";
+        }
+
+        else if(message.contains("Sad")){
             return "SAD";
         }
         else {
@@ -28,10 +32,18 @@ public class MoodAnalyser {
     public static void main(String[] args) {
         System.out.println("Welcome to Mood Analyser Program!");
 
-        MoodAnalyser moodAnalyser = new MoodAnalyser();
+        try {
+            MoodAnalyser moodAnalyser = new MoodAnalyser();
 
-        String message = "I am feeling Sad Today";
-        System.out.println("The mood is "+moodAnalyser.analyseMood());
+            String message = "I am feeling Sad Today".toUpperCase();
+            System.out.println("The mood is "+moodAnalyser.analyseMood());
+
+
+        }
+        catch (Exception e) {
+            System.out.println(e);
+        }
+
 
     }
 }
